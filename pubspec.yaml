@@ -40,10 +40,21 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
-  # assets:
-  #  - images/a_dot_burr.jpeg
-  #  - images/a_dot_ham.jpeg
+    # To add assets to your application, add an assets section, like this:
+    # assets:
+    #  - images/a_dot_burr.jpeg
+    #  - images/a_dot_ham.jpeg
+  assets:
+    - images/number-0.png
+    - images/number-1.png
+    - images/number-2.png
+    - images/number-3.png
+    - images/number-4.png
+    - images/number-5.png
+    - images/number-6.png
+    - images/number-7.png
+    - images/number-8.png
+    - images/number-9.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
