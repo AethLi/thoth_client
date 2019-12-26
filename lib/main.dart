@@ -11,21 +11,20 @@ class MainWidget extends StatefulWidget {
   _MainWidgetState createState() => _MainWidgetState();
 }
 
-class _MainWidgetState extends State<MainWidget>
-    with SingleTickerProviderStateMixin {
+class _MainWidgetState extends State<MainWidget> {
   String thisTitle = "just name";
   static var activeNavigate = 0;
   static List<String> imageAssets = [
-    "images/number-0.png",
-    "images/number-1.png",
-    "images/number-2.png",
-    "images/number-3.png",
-    "images/number-4.png",
-    "images/number-5.png",
-    "images/number-6.png",
-    "images/number-7.png",
-    "images/number-8.png",
-    "images/number-9.png"
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png"
   ];
 
   static var globeThemeData = ThemeData(
@@ -45,7 +44,6 @@ class _MainWidgetState extends State<MainWidget>
   }
 
   Future<Void> _getLast5Lottery() async {
-
 //    sleep(Duration(seconds: 20));
     return Future.delayed(Duration(seconds: 0), () {
       setState(() {
@@ -64,7 +62,7 @@ class _MainWidgetState extends State<MainWidget>
         child: Container(
           width: 300,
           height: 100,
-          child: SlotWidget(imageAssets, 60.0, 60.0, this, 100.0),
+          child: SlotWidget(imageAssets, 60.0, 60.0, 100.0),
         ),
       ),
       Divider(
@@ -172,7 +170,7 @@ class MainDrawerWidget extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(horizontal: 16.0),
                           child: ClipOval(
                             child: Image.asset(
-                              "images/number-0.png",
+                              "images/number0b.png",
                               width: 80.0,
                               height: 80.0,
                             ),
@@ -187,7 +185,7 @@ class MainDrawerWidget extends StatelessWidget {
                   ),
                   ListTile(
                     leading: const Icon(Icons.home),
-                    title: const Text('主页'),
+                    title: const Text('首页'),
                     selected: activeNavigate == 0,
                     onTap: () {
                       activeNavigate = 0;
@@ -195,11 +193,20 @@ class MainDrawerWidget extends StatelessWidget {
                     },
                   ),
                   ListTile(
-                    leading: const Icon(Icons.settings),
-                    title: const Text('设置'),
+                    leading: const Icon(Icons.forum),
+                    title: const Text('讨论'),
                     selected: activeNavigate == 1,
                     onTap: () {
                       activeNavigate = 1;
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.settings),
+                    title: const Text('设置'),
+                    selected: activeNavigate == 2,
+                    onTap: () {
+                      activeNavigate = 2;
                       Navigator.pop(context);
                     },
                   )
