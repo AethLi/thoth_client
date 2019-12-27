@@ -29,20 +29,18 @@ class _SlotWidgetState extends State<SlotWidget>
 
   @override
   void initState() {
-    AnimationController controller =
-        AnimationController(duration: Duration(milliseconds: 20000), vsync: this);
+    AnimationController controller = AnimationController(
+        duration: Duration(milliseconds: 200000), vsync: this);
     animation = Tween<double>(begin: 0, end: imageAssets.length * slotWidth)
         .animate(controller);
     super.initState();
     setState(() {
       slotItems.addAll([
-        Container(
-          height: slotHeight,
-          width: slotWidth,
-          child: Container(
-            padding: EdgeInsets.only(bottom: (animation.value)),
-            child: Image.asset(imageAssets[0]),
-          ),
+        _SingleSlotWidget(
+          slotHeight,
+          slotWidth,
+          imageAssets[0],
+          listenable: animation,
         ),
       ]);
     });
@@ -55,4 +53,32 @@ class _SlotWidgetState extends State<SlotWidget>
       children: slotItems,
     );
   }
+}
+
+class _SingleSlotWidget extends AnimatedWidget {
+  final double height;
+  final double width;
+  final String imageAsset;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: height-(listenable as Animation<double>).value,
+      width: width,
+      margin: EdgeInsets.only(bottom: (listenable as Animation<double>).value),
+      child: FittedBox(
+        fit: BoxFit.fitWidth,
+        child: Image.asset(
+          imageAsset,
+          width: width,
+          height: height,
+          fit: BoxFit.none,
+        ),
+      ),
+    );
+  }
+
+  _SingleSlotWidget(this.height, this.width, this.imageAsset,
+      {Key key, Listenable listenable})
+      : super(key: key, listenable: listenable);
 }

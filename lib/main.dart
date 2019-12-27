@@ -58,16 +58,17 @@ class _MainWidgetState extends State<MainWidget> {
   @override
   Widget build(BuildContext context) {
     mainContent = <Widget>[
-      Card(
-        child: Container(
-          width: 300,
-          height: 100,
-          child: SlotWidget(imageAssets, 60.0, 60.0, 100.0),
-        ),
-      ),
+//      Card(
+//        child: Container(
+//          width: 300,
+//          height: 100,
+//          child: SlotWidget(imageAssets, 60.0, 60.0, 100.0),
+//        ),
+//      ),
       Divider(
         color: globeThemeData.primaryColor,
       ),
+      SlotWidget(imageAssets,300.0,300.0,400.0)
     ];
     return MaterialApp(
       home: Scaffold(
