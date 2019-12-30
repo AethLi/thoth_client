@@ -12,7 +12,7 @@ class MainWidget extends StatefulWidget {
 }
 
 class _MainWidgetState extends State<MainWidget> {
-  String thisTitle = "just name";
+  String thisTitle = "最新公布开奖";
   static var activeNavigate = 0;
   static List<String> imageAssets = [
     "images/number0b.png",
@@ -58,17 +58,16 @@ class _MainWidgetState extends State<MainWidget> {
   @override
   Widget build(BuildContext context) {
     mainContent = <Widget>[
-//      Card(
-//        child: Container(
-//          width: 300,
-//          height: 100,
-//          child: SlotWidget(imageAssets, 60.0, 60.0, 100.0),
-//        ),
-//      ),
+      Card(
+        child: Container(
+          width: 300,
+          height: 100,
+          child: SlotWidget(imageAssets, 60.0, 60.0, 100.0),
+        ),
+      ),
       Divider(
         color: globeThemeData.primaryColor,
       ),
-      SlotWidget(imageAssets,300.0,300.0,400.0)
     ];
     return MaterialApp(
       home: Scaffold(
@@ -110,6 +109,7 @@ class _MainWidgetState extends State<MainWidget> {
                 onPressed: () {
                   setState(() {
                     activeNavigate = 0;
+                    thisTitle="最新公布开奖";
                   });
                 },
                 tooltip: "最新公布开奖",
@@ -123,6 +123,7 @@ class _MainWidgetState extends State<MainWidget> {
                 onPressed: () {
                   setState(() {
                     activeNavigate = 1;
+                    thisTitle="历史购买记录";
                   });
                 },
                 tooltip: "历史购买记录",
