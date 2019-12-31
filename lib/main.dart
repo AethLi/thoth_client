@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:thoth_client/widget/slot.dart';
 
@@ -219,20 +217,20 @@ class _MainWidgetState extends State<MainWidget> {
   List<Widget> mainContent;
 
   _MainWidgetState() {
-    _getLast5Lottery();
+//    _getLast5Lottery();
   }
 
-  Future<Void> _getLast5Lottery() async {
-//    sleep(Duration(seconds: 20));
-    return Future.delayed(Duration(seconds: 0), () {
-      setState(() {
-        mainContent.add(ListTile(
-          title: Text("sfasasf"),
-        ));
-      });
-      return;
-    });
-  }
+//  Future<Void> _getLast5Lottery() async {
+////    sleep(Duration(seconds: 20));
+//    return Future.delayed(Duration(seconds: 0), () {
+//      setState(() {
+//        mainContent.add(ListTile(
+//          title: Text("sfasasf"),
+//        ));
+//      });
+//      return;
+//    });
+//  }
 
   @override
   Widget build(BuildContext context) {
