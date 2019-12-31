@@ -1,8 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-
-import 'widget/slot.dart';
+import 'package:thoth_client/widget/slot.dart';
 
 void main() => runApp(MainWidget());
 
@@ -14,7 +13,7 @@ class MainWidget extends StatefulWidget {
 class _MainWidgetState extends State<MainWidget> {
   String thisTitle = "最新公布开奖";
   static var activeNavigate = 0;
-  static List<String> imageAssets = [
+  static List<String> imageAssets0 = [
     "images/number0b.png",
     "images/number1b.png",
     "images/number2b.png",
@@ -24,7 +23,187 @@ class _MainWidgetState extends State<MainWidget> {
     "images/number6b.png",
     "images/number7b.png",
     "images/number8b.png",
-    "images/number9b.png"
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+  ];
+  static List<String> imageAssets1 = [
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+  ];
+  static List<String> imageAssets2 = [
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+  ];
+  static List<String> imageAssets3 = [
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+  ];
+  static List<String> imageAssets4 = [
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+  ];
+  static List<String> imageAssets5 = [
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+  ];
+  static List<String> imageAssets6 = [
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+  ];
+  static List<String> imageAssets7 = [
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
+    "images/number2b.png",
+    "images/number3b.png",
+    "images/number4b.png",
+    "images/number5b.png",
+    "images/number6b.png",
+    "images/number7b.png",
+    "images/number8b.png",
+    "images/number9b.png",
+    "images/number0b.png",
+    "images/number1b.png",
   ];
 
   static var globeThemeData = ThemeData(
@@ -60,9 +239,52 @@ class _MainWidgetState extends State<MainWidget> {
     mainContent = <Widget>[
       Card(
         child: Container(
-          width: 300,
           height: 100,
-          child: SlotWidget(imageAssets, 60.0, 60.0, 100.0),
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: <Widget>[
+              Container(
+                width: 60,
+                height: 100,
+                child: SlotWidget(imageAssets0, 60.0, 60.0, 100.0),
+              ),
+              Container(
+                width: 60,
+                height: 100,
+                child: SlotWidget(imageAssets1, 60.0, 60.0, 100.0),
+              ),
+              Container(
+                width: 60,
+                height: 100,
+                child: SlotWidget(imageAssets2, 60.0, 60.0, 100.0),
+              ),
+              Container(
+                width: 60,
+                height: 100,
+                child: SlotWidget(imageAssets3, 60.0, 60.0, 100.0),
+              ),
+              Container(
+                width: 60,
+                height: 100,
+                child: SlotWidget(imageAssets4, 60.0, 60.0, 100.0),
+              ),
+              Container(
+                width: 60,
+                height: 100,
+                child: SlotWidget(imageAssets5, 60.0, 60.0, 100.0),
+              ),
+              Container(
+                width: 60,
+                height: 100,
+                child: SlotWidget(imageAssets6, 60.0, 60.0, 100.0),
+              ),
+              Container(
+                width: 60,
+                height: 100,
+                child: SlotWidget(imageAssets7, 60.0, 60.0, 100.0),
+              ),
+            ],
+          ),
         ),
       ),
       Divider(
@@ -109,7 +331,7 @@ class _MainWidgetState extends State<MainWidget> {
                 onPressed: () {
                   setState(() {
                     activeNavigate = 0;
-                    thisTitle="最新公布开奖";
+                    thisTitle = "最新公布开奖";
                   });
                 },
                 tooltip: "最新公布开奖",
@@ -123,7 +345,7 @@ class _MainWidgetState extends State<MainWidget> {
                 onPressed: () {
                   setState(() {
                     activeNavigate = 1;
-                    thisTitle="历史购买记录";
+                    thisTitle = "历史购买记录";
                   });
                 },
                 tooltip: "历史购买记录",
